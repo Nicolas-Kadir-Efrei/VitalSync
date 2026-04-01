@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vitalsync-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vitalsync-frontend
+  template:
+    metadata:
+      labels:
+        app: vitalsync-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: ghcr.io/<owner>/vitalsync-frontend:<sha>
+          ports:
+            - containerPort: 80
+
