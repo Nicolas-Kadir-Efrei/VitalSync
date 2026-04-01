@@ -6,6 +6,10 @@ app.get("/health", (req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
 });
 
+app.get("/ping", (req, res) => {
+  res.json({ ok: true });
+});
+
 app.get("/api/activities", (req, res) => {
   res.json([]);
 });
