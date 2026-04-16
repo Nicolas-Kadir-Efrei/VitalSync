@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 app.get("/health", (req, res) => {
-  res.json({ status: "ok", timestamp: new Date().toISOString() });
+  res.json({ status: "ok adjust health payload git", timestamp: new Date().toISOString() });
 });
 
 app.get("/api/activities", (req, res) => {
